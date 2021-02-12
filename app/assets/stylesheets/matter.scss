@@ -1,0 +1,40 @@
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  .content_main {
+      border: solid 1px black;
+      width: 25%;
+      margin-left: 5%;
+      margin-bottom: 1%;
+      .matter {
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+      }
+      .matter__title {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+        color: #317eac;
+      }
+      .matter__price {
+        font-weight: 600;
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+      }
+      .description {
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+}
