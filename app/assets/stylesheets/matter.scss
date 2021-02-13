@@ -1,0 +1,137 @@
+.content__title {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  .midasi {
+    position: relative;
+    margin: 30px;
+    text-align: center;
+   }
+   
+   .midasi:before,
+   .midasi:after {
+     position: absolute;
+     z-index: 0;
+     bottom: -5px;
+     display: block;
+     content: '';
+     border: 1em solid #d90606;
+   }
+   
+   .midasi:before {
+     left: -30px;
+     border-left-width: 15px;
+     border-left-color: transparent;
+   }
+   
+   .midasi:after {
+     right: -30px;
+     border-right-width: 15px;
+     border-right-color: transparent;
+   }
+   
+   .midasi span {
+     position: relative;
+     z-index: 1;
+     display: block;
+     padding: 1rem 2rem;
+     color: #fff;
+     background: #fa4141;
+   }
+   
+   .midasi span:before,
+   .midasi span:after {
+     position: absolute;
+     bottom: -10px;
+     display: block;
+     width: 10px;
+     height: 10px;
+     content: '';
+     border-style: solid;
+     border-color: #b70505 transparent transparent transparent;
+   }
+   
+   .midasi span:before {
+     left: 0;
+     border-width: 10px 0 0 10px;
+   }
+   
+   .midasi span:after {
+     right: 0;
+     border-width: 10px 10px 0 0;
+   }
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+
+  .content_main {
+      border: solid 1px black;
+      width: 25%;
+      margin-left: 6%;
+      margin-bottom: 1%;
+      .matter {
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+      }
+      .matter__title {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+        color: #317eac;
+      }
+      .matter__price {
+        font-weight: 600;
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+      }
+      .description {
+        padding-left: 10%;
+        padding-bottom: 5%;
+        display: block;
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+}
+
+.matter__new {
+  border: solid 1px black;
+  height: 720px;
+  width: 40vw;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  .matter__new-title {
+    text-align: center;
+  }
+  .form_item {
+    display: block;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    height: 5vh;
+    width: 30vw;
+  }
+  .form_item-description {
+    display: block;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    height: 15vh;
+    width: 30vw;
+  }
+  .form_item-title {
+    padding-left: 5%;
+  }
+}

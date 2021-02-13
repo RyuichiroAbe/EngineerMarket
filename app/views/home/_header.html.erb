@@ -9,22 +9,22 @@
     <div class = "r-header__top">
         <form id="form4" action="自分のサイトURL" method="get">
           <input id="sbox4"  id="s" name="s" type="text" placeholder="案件を入力してください" />
-          <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+          <button id="sbtn4" type="submit">検索</button>
         </form>
     </div>
 
     <div class = r-header__buttom>
       <li class = r-header__buttom-subitem>
-        <a href = "#">案件を探す</a>
+        <%= link_to "案件を探す", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">ログイン</a>
+        <%= link_to "ログイン", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">新規登録</a>
+        <%= link_to "新規登録", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">Q&A</a>
+        <%= link_to "案件投稿", new_matter_path, class: "r-header__buttom-subitem-btn" %>
       </li>
     </div>
   </div>
