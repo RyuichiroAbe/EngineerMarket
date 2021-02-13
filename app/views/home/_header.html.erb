@@ -15,16 +15,16 @@
 
     <div class = r-header__buttom>
       <li class = r-header__buttom-subitem>
-        <a href = "#">案件を探す</a>
+        <%= link_to "案件を探す", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">ログイン</a>
+        <%= link_to "ログイン", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">新規登録</a>
+        <%= link_to "新規登録", '＃', class: "r-header__buttom-subitem-btn" %>
       </li>
       <li class = r-header__buttom-subitem>
-        <a href = "#">Q&A</a>
+        <%= link_to "案件投稿", new_matter_path, class: "r-header__buttom-subitem-btn" %>
       </li>
     </div>
   </div>

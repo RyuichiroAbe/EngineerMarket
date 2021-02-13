@@ -73,7 +73,7 @@
         border-radius: 10px;/*角の丸み*/
         background: #6091d3;
         text-align: center;
-        a {
+        .r-header__buttom-subitem-btn{
           text-decoration: none;
           color: white;
           }
@@ -85,9 +85,19 @@
   }
 }
 
-.Clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
+.footer {
+  width: 100vw;
+  height: 100px;
+  margin-top: 0px;
+  background-color: #cccccc;
+  .footer__text {
+    color: #fff;
+    height: 80px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 }
 

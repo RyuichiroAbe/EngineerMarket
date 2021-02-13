@@ -11,7 +11,7 @@
       
       <a class = "matter__title"><%= matter.name %></a>
       <a class = "matter__price">￥<%= matter.price %>/月</a>
-      <a class = "matter"><%= matter.category_id %></a>
+      <a class = "matter"><%= matter.category %></a>
       <a class = "matter">必要スキル：<%= matter.skill %></a>
       <a class = "matter">提出期限日：<%= matter.filingday %></a>
 
@@ -20,3 +20,5 @@
     </div>
   <% end %>
 </div>
+
+<%= render 'home/footer' %>

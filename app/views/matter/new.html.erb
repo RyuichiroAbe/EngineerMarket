@@ -1,0 +1,15 @@
+<%= render 'home/header' %>
+
+<%= form_with model: @matter, url: matter_index_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :price %>
+  <%= f.text_field :category %>
+  <%= f.text_area :description %>
+  <%= f.text_field :filingday %>
+  <%= f.text_field :skill %>
+  <%= f.submit %>
+  
+<% end %>
+
+
+<%= render 'home/footer' %>
