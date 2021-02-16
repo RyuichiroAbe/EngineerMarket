@@ -1,4 +1,5 @@
 class MatterController < ApplicationController
+  
   def index
     @matter = Matter.all
   end
@@ -8,8 +9,15 @@ class MatterController < ApplicationController
   end
 
   def create
-    Matter.create(matter_params)
-    redirect_to matter_index_path
+    # Matter.create(matter_params)
+    # redirect_to matter_index_path
+    @matter = Matter.new(matter_params)
+
+    if @matter.save
+      redirect_to matter_index_path
+    else
+      render 'matter/new'
+    end
   end
 
   private

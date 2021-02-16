@@ -8,22 +8,23 @@
   <%= form_with model: @matter, url: matter_index_path do |f| %>
     
     <%= f.label :name, '案件の名前を入力してください' ,class: :"form_item-title"  %>
-    <%= f.text_field :name, placeholder: "山田 太郎" ,class: :"form_item" %>
+    <%= f.text_field :name, placeholder: "田中 太郎" ,class: :"form_item" %>
     
     <%= f.label :price, '案件報酬を入力してください' ,class: :"form_item-title" %>
-    <%= f.number_field :price, class: :"form_item" %>
+    <%= f.number_field :price, placeholder: "600000" ,class: :"form_item" %>
     
     <%= f.label :category, '案件での使用言語を入力してください' ,class: :"form_item-title" %>
-    <%= f.text_field :category, class: :"form_item" %>
+    <%= f.text_field :category, placeholder: "HTML,CSS,Ruby" ,class: :"form_item" %>
     
     <%= f.label :description, '案件の詳細を入力してください' ,class: :"form_item-title" %>
-    <%= f.text_area :description, class: :"form_item-description" %>
+    <%= f.text_area :description, 
+      placeholder: "詳細を入力してください" ,class: :"form_item-description" %>
     
     <%= f.label :filingday, '案件の提出日を入力してください' ,class: :"form_item-title" %>
     <%= f.datetime_field :filingday, class: :"form_item" %>
     
     <%= f.label :skill, '案件での必須スキル・条件を入力してください' ,class: :"form_item-title" %>
-    <%= f.text_field :skill, class: :"form_item" %>
+    <%= f.text_field :skill, placeholder: "HTML,CSS,Ruby"  ,class: :"form_item" %>
 
     <%= f.submit class: :"form_item" %>
     
