@@ -1,2 +1,5 @@
 class Destination < ApplicationRecord
+
+
+
 end
