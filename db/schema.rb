@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_043356) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nickname"
     t.string "family_name"
     t.string "first_name"
     t.string "family_name_kana"
