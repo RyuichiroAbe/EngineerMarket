@@ -1,4 +1,4 @@
-<%= render 'home/header' %>
+<%= render '/home/aftersign_header' %>
 
 
 <div class = "matter__new">
@@ -26,7 +26,7 @@
     <%= f.label :skill, '案件での必須スキル・条件を入力してください' ,class: :"form_item-title" %>
     <%= f.text_field :skill, placeholder: "HTML,CSS,Ruby"  ,class: :"form_item" %>
 
-    <%= f.submit class: :"form_item" %>
+    <%= f.submit "案件を投稿する" ,class: :"form_item" %>
     
   <% end %>
 </div>
