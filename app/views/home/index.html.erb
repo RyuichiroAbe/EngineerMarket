@@ -1,2 +1,7 @@
-<%= render 'header' %>
-<%= render 'footer' %>
+<% if user_signed_in? %>
+  <%= render 'aftersign_header' %>
+  <%= render 'footer' %>
+<% else %>
+  <%= render 'header' %>
+  <%= render 'footer' %>
+<% end %>

@@ -1,24 +1,52 @@
-<%= render 'home/header' %>
+<% if user_signed_in? %>
+  <%= render 'home/aftersign_header' %>
 
-<div class = content__title>
-      <h2 class = midasi><span>最新案件</span></h2>
-</div>
+  <div class = content__title>
+        <h2 class = midasi><span>最新案件</span></h2>
+  </div>
 
-<div class = "contents">
-  <% @matter.each do |matter| %>
+  <div class = "contents">
+    <% @matter.each do |matter| %>
 
-    <div class = "content_main">
-      
-      <a class = "matter__title"><%= matter.name %></a>
-      <a class = "matter__price">￥<%= matter.price %>/月</a>
-      <a class = "matter"><%= matter.category %></a>
-      <a class = "matter">必要スキル：<%= matter.skill %></a>
-      <a class = "matter">提出期限日：<%= matter.filingday %></a>
+      <div class = "content_main">
+        
+        <a class = "matter__title"><%= matter.name %></a>
+        <a class = "matter__price">￥<%= matter.price %>/月</a>
+        <a class = "matter"><%= matter.category %></a>
+        <a class = "matter">必要スキル：<%= matter.skill %></a>
+        <a class = "matter">提出期限日：<%= matter.filingday %></a>
 
-      
-      <a class = "description"><%= matter.description %></a>
-    </div>
-  <% end %>
-</div>
+        
+        <a class = "description"><%= matter.description %></a>
+      </div>
+    <% end %>
+  </div>
 
-<%= render 'home/footer' %>
+  <%= render 'home/footer' %>
+<% else %>
+  <%= render 'home/header' %>
+
+  <div class = content__title>
+        <h2 class = midasi><span>最新案件</span></h2>
+  </div>
+
+  <div class = "contents">
+    <% @matter.each do |matter| %>
+
+      <div class = "content_main">
+        
+        <a class = "matter__title"><%= matter.name %></a>
+        <a class = "matter__price">￥<%= matter.price %>/月</a>
+        <a class = "matter"><%= matter.category %></a>
+        <a class = "matter">必要スキル：<%= matter.skill %></a>
+        <a class = "matter">提出期限日：<%= matter.filingday %></a>
+
+        
+        <a class = "description"><%= matter.description %></a>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render 'home/footer' %>
+<% end %>
+
