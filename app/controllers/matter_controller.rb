@@ -26,12 +26,14 @@ class MatterController < ApplicationController
 
   def update
     @matter = Matter.find(params[:id])
+    @matter.update(matter_params)
+    redirect_to matter_index_path
 
-    if @matter.update(params[:id])
-      redirect_to request.referer
-    else
-      render :new
-    end
+    # if @matter.update(matter_params[:id])
+    #   redirect_to matter_index_path
+    # else
+    #   render :new
+    # end
   end
 
   def destroy

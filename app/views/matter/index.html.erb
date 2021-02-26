@@ -15,6 +15,7 @@
         <a class = "matter"><%= matter.category %></a>
         <a class = "matter">必要スキル：<%= matter.skill %></a>
         <a class = "matter">提出期限日：<%= matter.filingday %></a>
+        <%= link_to "編集", edit_matter_path(matter) %>
 
         
         <a class = "description"><%= matter.description %></a>
