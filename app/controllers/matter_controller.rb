@@ -20,6 +20,27 @@ class MatterController < ApplicationController
     end
   end
 
+  def edit
+    @matter = Matter.find(params[:id])
+  end
+
+  def update
+    @matter = Matter.find(params[:id])
+
+    if @matter.update(params[:id])
+      redirect_to request.referer
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @matter = Matter.find(params[:id])
+
+    @matter.destroy
+    redirect_to request.referer
+  end
+
   private
   def matter_params
     params.require(:matter).permit(:name, :price, :category, :description, :filingday, :skill )
