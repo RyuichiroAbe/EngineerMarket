@@ -15,9 +15,10 @@
         <a class = "matter"><%= matter.category %></a>
         <a class = "matter">必要スキル：<%= matter.skill %></a>
         <a class = "matter">提出期限日：<%= matter.filingday %></a>
-        <%= link_to "編集", edit_matter_path(matter) %>
-        <%= link_to "削除", matter, method: :delete, data: { confirm: "#{matter.name}を削除して大丈夫ですか？" } %>
-
+        <% if user_signed_in? && current_user.id == matter.user_id %>
+          <%= link_to "編集", edit_matter_path(matter) %>
+          <%= link_to "削除", matter, method: :delete, data: { confirm: "#{matter.name}を削除して大丈夫ですか？" } %>
+        <% end %>
         
         <a class = "description"><%= matter.description %></a>
       </div>
