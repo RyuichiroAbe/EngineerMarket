@@ -20,6 +20,10 @@ class MatterController < ApplicationController
     end
   end
 
+  def show
+    @matter = Matter.find(params[:id])
+  end
+
   def edit
     @matter = Matter.find(params[:id])
   end
